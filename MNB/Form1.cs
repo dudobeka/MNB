@@ -1,23 +1,30 @@
-﻿using System;
+﻿using MNB.Entities;
+using MNB.MnbServiceReference;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MNB.MnbServiceReference;
-using System;
 
 namespace MNB
 {
     public partial class Form1 : Form
-    {
-        public Form1()
+{
+BindingList<RateData> Rates = new BindingList<RateData>();
+public Form1()
         {
             InitializeComponent();
+            dataGridView1.DataSource = Rates;
+            GetRates();
+        }
 
+        private static void GetRates()
+        {
             MNBArfolyamServiceSoapClient mnbService = new MNBArfolyamServiceSoapClient();
             GetExchangeRatesRequestBody request = new GetExchangeRatesRequestBody()
             {
@@ -27,11 +34,7 @@ namespace MNB
             };
             GetExchangeRatesResponseBody response = mnbService.GetExchangeRates(request);
             string result = response.GetExchangeRatesResult;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            MessageBox.Show(result);
         }
     }
 }
