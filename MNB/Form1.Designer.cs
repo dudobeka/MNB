@@ -39,6 +39,9 @@ namespace MNB
             this.getExchangeRatesResultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getExchangeRatesResponseBodyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chartRateData = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.cbx1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getExchangeRatesResponseBodyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRateData)).BeginInit();
@@ -70,6 +73,7 @@ namespace MNB
             // 
             chartArea1.Name = "ChartArea1";
             this.chartRateData.ChartAreas.Add(chartArea1);
+            this.chartRateData.DataSource = this.getExchangeRatesResponseBodyBindingSource;
             legend1.Name = "Legend1";
             this.chartRateData.Legends.Add(legend1);
             this.chartRateData.Location = new System.Drawing.Point(24, 69);
@@ -82,11 +86,40 @@ namespace MNB
             this.chartRateData.TabIndex = 1;
             this.chartRateData.Text = "chart1";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(33, 25);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.Value = new System.DateTime(2022, 11, 21, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(239, 25);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 3;
+            this.dateTimePicker2.Value = new System.DateTime(2022, 11, 24, 0, 0, 0, 0);
+            // 
+            // cbx1
+            // 
+            this.cbx1.DataSource = this.getExchangeRatesResponseBodyBindingSource;
+            this.cbx1.FormattingEnabled = true;
+            this.cbx1.Location = new System.Drawing.Point(458, 25);
+            this.cbx1.Name = "cbx1";
+            this.cbx1.Size = new System.Drawing.Size(121, 21);
+            this.cbx1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbx1);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.chartRateData);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -110,6 +143,9 @@ namespace MNB
         private System.Windows.Forms.DataGridViewTextBoxColumn getExchangeRatesResultDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource getExchangeRatesResponseBodyBindingSource;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRateData;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox cbx1;
     }
 }
 
