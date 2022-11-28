@@ -37,7 +37,7 @@ namespace MNB
             string result = response.GetCurrenciesResult;
             XmlDocument x = new XmlDocument();
             x.LoadXml(result);
-            MessageBox.Show(result);
+            //MessageBox.Show(result);
             XmlElement item = x.DocumentElement;
             int i = 0;
             while (item.ChildNodes[0].ChildNodes[i] != null)
