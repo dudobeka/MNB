@@ -130,7 +130,6 @@ namespace MNB
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getExchangeRatesResponseBodyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRateData)).EndInit();
@@ -138,11 +137,6 @@ namespace MNB
             ((System.ComponentModel.ISupportInitialize)(this.getCurrentExchangeRatesResponseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
