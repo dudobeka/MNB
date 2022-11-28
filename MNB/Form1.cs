@@ -89,14 +89,14 @@ namespace MNB
             RefreshData();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
             RefreshData();
         }
 
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        private void cbx1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            RefreshData();
         }
     }
 }
